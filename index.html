@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>Statistika: Pertemuan 10</title>
+    <title>Statistika: Pertemuan 10 dan 11</title>
     <meta charset="utf-8" />
     <meta name="author" content="oleh Riana Hadiana" />
     <script src="libs/header-attrs-2.11/header-attrs.js"></script>
@@ -28,8 +28,8 @@
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
-# Statistika: Pertemuan 10
-## Uji Hipotesis (1)
+# Statistika: Pertemuan 10 dan 11
+## Uji Hipotesis
 ### oleh Riana Hadiana
 ### Universitas Serang Raya
 
@@ -82,7 +82,7 @@ top:1em;right:1em;
 
 
 .pull-left[
-&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
 ![](gb_01.jpg)
 
 ]
@@ -91,9 +91,9 @@ top:1em;right:1em;
 &lt;br&gt;
 # **.purple[Outline]**
 
-- ##Interpretasi Selang Kepercayaan
-- ##Penduga Selang untuk Proporsi
-- ##Penduga Selang untuk Ragam
+- ##Pendahuluan Uji Hipotesis
+- ##Uji Hipotesis untuk Rata-Rata
+- ##Uji Hipotesis untuk Proporsi
 
 ]
 
@@ -101,47 +101,32 @@ top:1em;right:1em;
 
 .pull.center[
 
-## **Selang Kepercayaan 95%**
-
-![](CI Illustration.png)
-
-
-
-]
-
----
-
-.pull.center[
-
-### **Interpretasi Selang Kepercayaan**
+## **Pendahuluan Uji Hipotesis**
 
 ]
 
 .pull-left[
 
-**Slide 13 Pertemuan 08**
+- **Pengujian hipotesis** adalah langkah-langkah yang dilakukan dengan tujuan untuk memutuskan apakah suatu hipotesis tersebut diterima atau ditolak
 
-Selang Kepercayaan (SK) 95% bagi `\(\mu\)` adalah
-`$$22.01 &lt; \mu &lt; 22.99$$`
+- **Hipotesis** adalah asumsi yang bisa benar atau salah terhadap suatu masalah dan perlu pengujian lebih lanjut
 
-**Kesimpulan**: 
-1. Kita percaya bahwa pada selang 22.01 sampai 22.99 desiliter .red[**memuat**] rataan banyaknya minuman yang dikeluarkan mesin dengan peluang 95%, .red[**_atau_**]
+- Ada dua kemungkinan dalam pengujian hipotesis yaitu menolak atau menerima hipotesis. Menolak hipotesis artinya bahwa hipotesis tidak benar. **Menerima hipotesis artinya tidak cukup bukti untuk menolak hipotesis**
 
-1. Kita percaya bahwa pada selang 22.01 sampai 22.99 desiliter .red[**tidak memuat**] rataan banyaknya minuman yang dikeluarkan mesin dengan peluang 5%
 
 ]
 
 .pull-right[
 
-**Slide 20 Pertemuan 08**
+- Rumusan pengujian hipotesis, selalu dibuat pernyataan hipotesis dengan harapan akan ditolak, disebut sebagai hipotesis nol, `\(H_0\)`.
 
-Selang Kepercayaan (SK) 95% bagi `\(\mu_1-\mu_2\)` adalah
-`$$-1863 &lt; \mu_1-\mu_2 &lt; -1737$$`
-**Kesimpulan**: 
-1. Kita percaya bahwa pada selang `\(-1863\)` sampai `\(-1737\)` jam .red[**memuat**] selisih rataan pemakaian ban dengan peluang 95%, .red[**_atau_**]
+- Penolakan hipotesis nol akan menjurus pada penerimaan hipotesis alternatif, `\(H_1\)`. 
 
-1. Kita percaya bahwa pada selang `\(-1863\)` sampai `\(-1737\)` jam .red[**tidak memuat**] selisih rataan pemakaian ban dengan peluang 5%
-
+- Dasar yang dipakai untuk merumuskan hipotesis antara lain: 
+  1. pengetahuan, 
+  1. hasil penelitian, 
+  1. pengalaman, dan 
+  1. ketajaman berpikir.
 
 ]
 
@@ -149,37 +134,32 @@ Selang Kepercayaan (SK) 95% bagi `\(\mu_1-\mu_2\)` adalah
 
 .pull.center[
 
-### **Interpretasi Selang Kepercayaan**
+### **Pendahuluan Uji Hipotesis**
 
 ]
 
 .pull-left[
 
-**Slide 25 Pertemuan 08**
+**Hipotesis Statistik** adalah suatu pernyataan tentang parameter populasi
 
-Selang Kepercayaan 95% bagi rata-rata selisih berat badan sebelum dan sesudah program diet `\((\mu_d)\)` adalah
+- `\(H_0\)` (Hipotesis Nol) adalah suatu pernyataan yang bersifat "**status quo**" (tidak ada beda, tidak ada perubahan)
 
-`$$4.24 &lt; \mu_d &lt; 5.96$$`
-
-**Kesimpulan**: 
-1. Kita percaya bahwa pada selang `\(4.24\)` sampai `\(5.96\)` kg **memuat** rataan selisih berat badan sebelum dan sesudah program diet dengan peluang 95%, .red[**_atau_**]
-
-1. Kita percaya bahwa pada selang `\(4.24\)` sampai `\(5.96\)` kg **tidak memuat** rataan selisih berat badan sebelum dan sesudah program diet dengan peluang 5%
+- `\(H_1\)` (Hipotesis Alternatif) adalah pernyataan lain yang akan diterima jika `\(H_0\)` ditolak ("ada perbedaan", "terdapat perubahan")
 
 ]
 
 .pull-right[
 
-Pada Selang Kepercayaan untuk selisih rataan dari 2 populasi yang saling bebas:
+Dalam pengambilan keputusan memungkinkan untuk terjadi kesalahan.
 
-1. `\(\text{positif (+)} &lt; \mu_1-\mu_2 &lt;\text{positif (+)}\)` &lt;br&gt;
-maka rataan populasi 1 .red[**lebih besar**] dari rataan populasi 2
-1. `\(\text{negatif (-)} &lt; \mu_1-\mu_2 &lt;\text{negatif (-)}\)` &lt;br&gt;
-maka rataan populasi 1 .red[**lebih kecil**] dari rataan populasi 2
-1. `\(\text{negatif (-)} &lt; \mu_1-\mu_2 &lt;\text{positif (+)}\)` &lt;br&gt;
-maka rataan populasi 1 .red[**tidak berbeda**] dari rataan populasi 2
+|   | `\(H_0\)` benar | `\(H_0\)` salah |
+|:--| :--:        |:--:         |
+|Tolak `\(H_0\)` | Peluang salah jenis I (Taraf nyata; `\(\alpha\)` ) | Kuasa Pengujian `\((1-\beta)\)` |
+|Terima `\(H_0\)` | Tingkat Kepercayaan `\((1-\alpha)\)` | Peluang salah jenis II `\((\beta)\)`
 
-Hal tersebut berlaku pula pada Selang Kepercayaan pada .red[**data berpasangan**]
+- Memperkecil kesalahan tipe-I `\((\alpha)\)` akan memperbesar kesalahan tipe-II `\((\beta)\)` dan sebaliknya.
+- Makin besar ukuran sampel, nilai `\(\alpha\)` dan `\(\beta\)` akan makin kecil.
+
 
 ]
 
@@ -187,41 +167,174 @@ Hal tersebut berlaku pula pada Selang Kepercayaan pada .red[**data berpasangan**
 
 .pull.center[
 
-### **Jenis Penduga Selang**
+### **Pendahuluan Uji Hipotesis**
 
-![](gb_06.jpg)
+]
 
+.pull-left[
+
+**Langkah-Langkah Pengujian Hipotesis**
+
+1. Rumuskan Hipotesis Nol `\((H_0)\)` dan Hipotesis Alternatif `\((H_1)\)`. Uji 1 arah atau uji 2 arah.
+
+1. Tentukan nilai `\(\alpha\)` yang menggambarkan daerah penolakan dan penerimaan `\(H_0\)`
+
+1. Tentukan dan hitung Statistik Uji yang sesuai dengan hipotesis
+
+1. Pengujian Hipotesis: Tolak atau terima `\((H_0)\)`
+
+1. Kesimpulan
+
+
+
+
+]
+
+.pull-right[
+
+### 1. Hipotesis
+.red[**H1potesis 2 Arah:**]
+
+`\(H_0\)` : `\(\theta=\theta_0\)` &lt;br&gt; `\(H_1\)` : `\(\theta\ne\theta_0\)`
+
+.red[**Hipotesis 1 Arah:**]
+
+`\(H_0\)` : `\(\theta \le \theta_0\)` &lt;br&gt; `\(H_0\)` : `\(\theta &gt; \theta_0\)`
+
+atau
+
+`\(H_0\)` : `\(\theta \ge \theta_0\)` &lt;br&gt; `\(H_0\)` : `\(\theta &lt; \theta_0\)`
+
+]
+
+---
+
+
+.pull.center[
+
+### **Pendahuluan Uji Hipotesis**
+
+]
+
+.pull-left[
+
+### 2. Nilai `\(\alpha\)`
+
+Nilai `\(\alpha\)` atau tingkat nyata (_significant level_) merupakan peluang melakukan kesalahan jenis-I
+
+### 3. Statistik Uji
+
+Statistik uji yang digunakan harus dengan sesuai dengan sebaran dari hipotesis. Secara umum, bentuk dari statistik uji adalah seperti berikut.
+
+`\(U=\dfrac{\hat{\theta}}{s_\hat{\theta}}\)`
+
+`\(\theta\)` merupakan sembarang parameter &lt;br&gt;
+`\(U\)` merupakan sembarang statistik uji untuk paramater `\(\theta\)`
+
+]
+
+.pull-right[
+
+### 4. Pengujian Hipotesis
+
+Tergantung pada `\(H_1\)`. Misalkan `\(U \sim N(0,1)\)` dan `\(H_1\)` : `\(\theta \ne \theta_0\)`
+
+![](gb_06.png)
+Tolak `\(H_0\)` jika `\(U&lt;-z_\frac{\alpha}{2}\)` atau `\(U&gt;z_\frac{\alpha}{2}\)`
+
+]
+---
+
+.pull.center[
+
+### **Pendahuluan Uji Hipotesis**
+
+]
+
+.pull-left[
+
+
+
+![](gb_07.png)
+Tolak `\(H_0\)` jika `\(U&lt;-z_\frac{\alpha}{2}\)`
+
+![](gb_08.png)
+Tolak `\(H_0\)` jika `\(U&gt;z_\frac{\alpha}{2}\)`
+]
+
+.pull-right[
+
+### 5. Kesimpulan
+
+Cukup bukti / tidak cukup bukti untuk menyatakan bahwa `\(H_0\)` benar pada taraf nyata `\(\alpha\)`
+]
+
+---
+
+.pull.center[
+
+![](gb_07.jpg)
+
+]
+
+---
+
+.pull.center[
+
+![](gb_08.jpg)
 ]
 
 ---
 
 class: inverse, center, middle
 
-# Penduga Selang untuk Proporsi `\((p)\)` 1 Populasi
+# Uji Hipotesis Untuk rata-rata `\((\mu)\)` 1 Populasi
 
 ---
 
-.pull.center[
-### `\(p\)` diduga oleh `\(\hat{p}\)`
+.pull-left[
+### Hipotesis
 
-![](gb_02.jpg)
+Satu arah:
+- `\(H_0\)` : `\(\mu \ge \mu_0 \hspace{1cm}\text{Vs}\hspace{1cm}H_1:\mu&lt;\mu_0\)`
+- `\(H_0\)` : `\(\mu \le \mu_0 \hspace{1cm}\text{Vs}\hspace{1cm}H_1:\mu&gt;\mu_0\)`
+
+Dua arah:
+- `\(H_0\)` : `\(\mu = \mu_0 \hspace{1cm}\text{Vs}\hspace{1cm}H_1:\mu \ne \mu_0\)`
+
+### Statistik Uji
+
+Ragam populasi `\((\sigma^2)\)` diketahui:
+`\(z_0=\dfrac{\bar{x}-\mu_0}{\sigma/\sqrt{n}}\)`
+
+Ragam populasi `\((\sigma^2)\)` tidak diketahui:
+`\(t_0=\dfrac{\bar{x}-\mu_0}{s/\sqrt{n}}\)`
+
 ]
 
----
+.pull-right[
 
-.pull.center[
-### Dugaan Selang Kepercayaan `\(\left(1 − \alpha\right)\times100\%\)` bagi `\(p\)`
+### Pengujian Hipotesis
 
-![](gb_03.jpg)
+**Ragam populasi `\((\sigma)\)` diketahui:**
+
+- `\(H_0\)` : `\(\mu \ge \mu_0 \hspace{1cm}\text{Vs}\hspace{1cm}H_1:\mu&lt;\mu_0\)`
+
+Tolak `\(H_0\)` jika `\(z_0&lt;-z_\alpha\)`
+
+- `\(H_0\)` : `\(\mu \le \mu_0 \hspace{1cm}\text{Vs}\hspace{1cm}H_1:\mu&gt;\mu_0\)`
+
+Tolak `\(H_0\)` jika `\(z_0&gt;z_\alpha\)`
+
+- `\(H_0\)` : `\(\mu = \mu_0 \hspace{1cm}\text{Vs}\hspace{1cm}H_1:\mu \ne \mu_0\)`
+
+Tolak `\(H_0\)` jika `\(z_0&lt;-z_\frac{\alpha}{2}\)`  atan `\(z_0&gt;z_\frac{\alpha}{2}\)`
+
+**Ragam populasi `\((\sigma)\)` tidak diketahui:**
+
+Ganti `\(z_0\)`, `\(z_\alpha\)`, dan `\(z_\frac{\alpha}{2}\)` dengan `\(t_0\)`, `\(t_{\alpha:(n-1)}\)`, dan `\(t_{\frac{\alpha}{2}:(n-1)}\)`
+
 ]
-
----
-
-.pull.center[
-### Dugaan Selang Kepercayaan `\(\left(1 − \alpha\right)\times 100\%\)` bagi `\(p\)`
-]
-
-`\(Y=13.11-3.94^\text{(20-25th)}X_{1.1}-4.02^\text{(&gt;30th)}X_{1.1}+3.73^\text{(SMAS)}X_{1.2}+0.70^\text{(SMKN)}X_{1.2}-0.48^\text{(MAN)}X_{1.2}+\\0.36^\text{(NonPNS)}X_{1.3}+0.48^\text{(Honorer)}X_{1.3}-4.59^\text{(Sarjana)}X_{1.4}-3.24^\text{(Pascasarjana)}X_{1.4}+0.40X_{1.5}-\\0.83^\text{(2-4jt)}X_{1.6}+1.65^\text{(&gt;4jt)}X_{1.6}-0.07X_{2.1}+0.21X_{2.2}+0.79X_{2.3}\)`
 
 ---
 
@@ -229,45 +342,166 @@ class: inverse, center, middle
 
 **Contoh**
 
-Sebuah lembaga survey mengambil contoh acak sebanyak 2000 responden dengan diperoleh hasil 1120 diantaranya puas terhadap kinerja poliklinik `\(A\)`.
+Batasan yang ditentukan oleh pemerintah terhadap emisi gas CO kendaraan bermotor adalah 50 ppm. Sebuah perusahaan baru yang sedang mengajukan ijin pemasaran mobil, diperiksa oleh petugas pemerintah untuk menentukan apakah perusahaan tersebut layak diberikan ijin.
 
-Buatlah selang kepercayaan 95% bagi proporsi responden yang puas.
+Sebanyak 20 mobil diambil secara acak dan diuji emisi CO-nya. Dari data didapatkan, rata-ratanya 55 dan ragamnya 4.2. Dengan menggunakan taraf nyata 5%, layakkah perusahaan tersebut mendapat ijin?
+
 ___
-
 Diketahui:&lt;br&gt;
-`\(n=2000\)` dan `\(\sum{x_i}=1120\)`, maka &lt;br&gt;
-`\(\hat{p}=\dfrac{\sum{x_i}}{n}=\dfrac{1120}{2000}=0.56\)`
+`\(n=20\)`, `\(\bar{x}=55\)`, dan `\(s^2=4.2\)`
 
+`\(H_0\)` : `\(\mu \le 50 \hspace{1cm}\text{Vs}\hspace{1cm}H_1:\mu &gt; 50\)`
 
-`$$\begin{align*}
-\hat{p}-z_\frac{\alpha}{2}\sqrt{\dfrac{\hat{p}(1-\hat{p})}{n}}&amp;=0.56-1.96\sqrt{\dfrac{0.56(1-0.56)}{2000}} \\
-&amp;=0.56-0.02 \\
-&amp;=0.54
-\end{align*}$$`
+**Statistik uji**&lt;br&gt;
+Karena `\(\sigma^2\)` tidak diketahui maka statistik uji yang digunakan adalah
+`$$t_0=\dfrac{\bar{x}-\mu_0}{s/\sqrt{n}}$$`
+
 ]
 
 .pull-right[
 
-&lt;br&gt;&lt;br&gt;&lt;br&gt;
+`\(t_0=\dfrac{\bar{x}-\mu_0}{s/\sqrt{n}}=\dfrac{55-50}{\sqrt{4.2}/\sqrt{20}}=10.91\)`
 
-`$$\begin{align*}
-\hat{p}+z_\frac{\alpha}{2}\sqrt{\dfrac{\hat{p}(1-\hat{p})}{n}}&amp;=0.56+1.96\sqrt{\dfrac{0.56(1-0.56)}{2000}} \\
-&amp;=0.56+0.02 \\
-&amp;=0.58
-\end{align*}$$`
+**Titik Kritis**
 
-Selang Kepercayaan 95% bagi proporsi responden yang puas adalah
+Karena merupakan uji satu arah, maka titik kritis yang sesuai dengan statistik uji adalah 
 
-`$$\begin{align*}
-\hat{p}-z_\frac{\alpha}{2}\sqrt{\dfrac{\hat{p}(1-\hat{p})}{n}}&amp;&lt;p&lt;\hat{p}+z_\frac{\alpha}{2}\sqrt{\dfrac{\hat{p}(1-\hat{p})}{n}} \\
-0.54&amp;&lt;p&lt;0.58
-\end{align*}$$`
+`\(t_{\alpha(n-1)}=t_{0.05(19)}=1.729\)`
 
-Jadi, kita percaya bahwa pada selang 0.54 sampai 0.58 memuat proporsi
-responden puas terhadap kinerja Poliklinik `\(A\)` pada `\(\alpha=5\%\)`, .red[**atau**]
+![](gb_03.jpg)
 
-Kita percaya bahwa pada selang 0.54 sampai 0.58 memuat proporsi
-responden puas terhadap kinerja Poliklinik `\(A\)` dengan peluang `\(95\%\)`
+Terlihat bahwa `\(t_0&gt;t_{0.05(19)}\)` sehingga `\(H_0\)` ditolak. Cukup bukti untuk
+menyatakan bahwa perusahaan mobil tersebut tidak layak diberikan izin pada taraf nyata 5%
+]
+
+---
+
+.pull-left[
+
+**Latihan 1**
+
+Direktur keuangan suatu perusahaan berpendapat bahwa rata-rata pengeluaran untuk biaya hidup perhari bagi setiap karyawan di perusahaan tersebut adalah Rp176.000,00. Untuk menguji pendapatnya, dilakukanlah wawancara terhadap 25 karyawan secara acak dan didapat rata-rata pengeluaran harian sebesar Rp170.000,00 dengan simpangan baku sebesar Rp10.000,00. Dengan taraf nyata `\(5\%\)`, ujilah pendapat tersebut.
+___
+**Latihan 2**
+
+Ada yang mengatakan bahwa jarak yang ditempuh sebuah mobil secara rata-rata kurang dari 20000 km dalam 1 tahun. Untuk menguji pendapat ini suatu contoh acak 100 pemilik mobil diminta mencatat km yang ditempuhnya. Apakah anda sependapat dengan pernyataan di atas jika contoh tersebut menghasilkan rata-rata 23500 km dengan simpangan baku 3900 km?
+
+]
+
+.pull-right[
+
+**Latihan 3**
+
+Seorang pejabat perbankan yang bertanggung jawab dalam pemberian kredit beranggapan bahwa rata-rata modal perusahaan nasional adalah sebesar Rp100 milyar. Untuk menguji anggapannya tersebut, dipilih secara acak 81 perusahaan nasinal dan didapat rata-rata modal mereka adalah Rp105 milyar dengan simpangan baku Rp18 milyar. Dengan menggunakan `\(\alpha=1\%\)`, ujilah anggapan tersebut.
+]
+
+---
+
+class: inverse, center, middle
+
+# Uji Hipotesis untuk selisish rata-rata `\((\mu_1-\mu_2)\)` 2 populasi saling bebas
+
+---
+
+.pull-left[
+### Hipotesis
+
+Satu arah:
+- `\(H_0\)` : `\(\mu_1 \ge \mu_2 \hspace{1cm}\text{Vs}\hspace{1cm}H_1:\mu_1&lt;\mu_2\)`
+- `\(H_0\)` : `\(\mu_1 \le \mu_2 \hspace{1cm}\text{Vs}\hspace{1cm}H_1:\mu_1&gt;\mu_2\)`
+
+Dua arah:
+- `\(H_0\)` : `\(\mu_1 = \mu_2 \hspace{1cm}\text{Vs}\hspace{1cm}H_1:\mu_1 \ne \mu_2\)`
+
+### Statistik Uji
+
+**1. Jika `\(\sigma^2_1\)` dan `\(\sigma^2_2\)` diketahui:**
+`\(z_0=\dfrac{\bar{x}_1-\bar{x}_2}{\sqrt{\dfrac{\sigma^2_1}{n_1}+\dfrac{\sigma^2_2}{n_2}}}\)`
+
+**Titik Kritis:** `\(z_\alpha\)` (.red[uji satu arah]), `\(z_\frac{\alpha}{2}\)` (.red[uji dua arah])
+
+]
+
+.pull-right[
+
+**2. Jika `\(\sigma^2_1\)` dan `\(\sigma^2_2\)` tidak diketahui &lt;br&gt;dan diasumsikan sama:**
+
+`\(t_0=\dfrac{\bar{x}_1-\bar{x}_2}{\sqrt{s^2_\text{gab}\left( \dfrac{1}{n_1}+\dfrac{1}{n_2}\right)}}\)` di mana
+
+`\(s^2_\text{gab}=\dfrac{(n_1-1)s^2_1+(n_2-1)s^2_2}{n_1+n_2-2}\)`
+
+**Titik Kritis:** 
+
+.red[uji satu arah] : `\(t_{\alpha(v)}\)` 
+
+.red[uji dua arah] : `\(t_{\frac{\alpha}{2}(v)}\)` 
+
+dengan `\(v=n_1+n_2-2\)`
+
+]
+
+---
+
+.pull-left[
+
+**3. Jika `\(\sigma^2_1\)` dan `\(\sigma^2_2\)` tidak diketahui &lt;br&gt;dan diasumsikan tidak sama:**
+
+`\(t_0=\dfrac{\bar{x}_1-\bar{x}_2}{\sqrt{ \dfrac{\sigma^2_1}{n_1}+\dfrac{\sigma^2_2}{n_2}}}\)`
+
+**Titik Kritis:** 
+
+.red[uji satu arah] : `\(t_{\alpha(v)}\)` 
+
+.red[uji dua arah] : `\(t_{\frac{\alpha}{2}(v)}\)` 
+
+dengan 
+`\(v=\dfrac{\left(\dfrac{s^2_1}{n_1}+\dfrac{s^2_2}{n_2}\right)^2}{\dfrac{\left(\dfrac{s^2_1}{n_1}\right)^2}{\left(n_1-1\right)}+\dfrac{\left(\dfrac{s^2_2}{n_2}\right)^2}{n_2-1}}\)`
+
+]
+
+.pull-right[
+
+**Contoh**
+
+Seorang manager jasa pengiriman &lt;br&gt;meyakini bahwa paket-paket yang dikiriman &lt;br&gt;pada akhir bulan lebih berat daripada paket-&lt;br&gt;paket yang dikirimkan pada awal bulan. Untuk menguji keyakinan tersebut seorang peneliti mengambil sampel 15 paket pada awal bulan dan diperolah ratarata 40 kg dan simpangan baku 6 kg, sedangkan sampel 10 paket yg dipilih akhir bulan rata-rata beratnya 50 kg dgn simpangan baku 10,2 kg.
+
+Jika diasumsikan ragam kedua populasi sama, dapatkah kita menyimpulkan bahwa pendapat manager itu benar pada taraf nyata 10% ?
+
+___
+
+Misalkan `\(1 \rightarrow\)` awal, dan `\(2 \rightarrow\)` akhir &lt;br&gt;
+**Hipotesis**: `\(H_0\)` : `\(\mu_1 \ge \mu_2\)` dan `\(H_1\)` : `\(\mu_1&lt;\mu_2\)` &lt;br&gt;
+**Statistik Uji**:
+`\(t_0=\dfrac{\bar{x}_1-\bar{x}_2}{\sqrt{s^2_\text{gab}\left( \dfrac{1}{n_1}+\dfrac{1}{n_2}\right)}}\)`
+
+]
+
+---
+
+.pull-left[
+
+`\(\begin{align*}s^2_\text{gab}&amp;=\dfrac{(n_1-1)s^2_1+(n_2-1)s^2_2}{n_1+n_2-2}\\&amp;=\dfrac{(15-1)6^2+(10-1)10.2^2}{15+10-2} \\&amp;=62.62\end{align*}\)`
+
+`\(\begin{align*} t_0&amp;=\dfrac{\bar{x}_1-\bar{x}_2}{\sqrt{s^2_\text{gab}\left( \dfrac{1}{n_1}+\dfrac{1}{n_2}\right)}}\\&amp;=\dfrac{40-50}{\sqrt{62.62\left( \dfrac{1}{15}+\dfrac{1}{10}\right)}}\\&amp;=-3.0953\end{align*}\)`
+
+**Titik Kritis**: `\(t_{\alpha(v)}=t_{0.1(23)}=1.319\)`
+
+`\(H_0\)` .red[**ditolak**] jika `\(t_0&lt;t_{\alpha(v)}\)`
+
+
+
+]
+
+.pull-right[
+
+Terlihat bahwa `\(t_0&lt;t_{\alpha(v)}\)`, &lt;br&gt;
+sehingga `\(H_0\)` ditolak
+&lt;br&gt;&lt;br&gt;
+
+![](gb_04.jpg)
+&lt;br&gt;&lt;br&gt;
+Dengan demikian cukup bukti untuk menyatakan pendapat manager tersebut benar pada taraf nyata `\(5\%\)`.
+
 ]
 
 ---
@@ -275,66 +509,46 @@ responden puas terhadap kinerja Poliklinik `\(A\)` dengan peluang `\(95\%\)`
 .pull-left[
 **Latihan 1**
 
-The U.S News and World Report menyatakan bahwa suatu obat baru yang diekstrak dari suatu jamur, cyclosporin A, mampu meningkatkan tingkat kesuksesan dalam operasi transplantasi organ.Menurut artikel tersebut, 32 pasien yang menjalani operasi transplantasi ginjal diberikan obat baru tersebut. Dari 32 pasien tersebut, 19 diantaranya sukses dalam operasi transpalntasi ginjal.
-
-Tentukan selang kepercayaan 95% bagi `\(p\)` (proporsi pasien yang sukses
-dalam operasi dengan menggunakan obat baru)
+Seorang pemilik perusahaan yang membuat bola lampu merek A dan B berpendapat bahwa tidak ada perbedaan rata-rata lamanya daya tahan kedua merek lampu tersebut. Untuk menguji pendapatnya, dilakukan percobaan terhadap 100 lampu merek A dan 50 lampu merek B yang dipilih secara acak. Ternyata rata-rata daya tahan lampu A 952 jam dan merek B 987 jam dengan simpangan baku masing-masing 85 jam dan 92 jam. Dengan `\(\alpha=5\%\)`, ujilah pendapat tersebut.
 ___
 
 **Latihan 2**
 
-Dari 100 buah barang yang dipilih secara acak ternyata ada 30 buah barang yang rusak. Tentukan penduga selang bagi `\(p\)` (proporsi barang yang rusak) dengan tingkat keyakinan 95% 
+Seorang petugas pengawasan mutu rokok di Kementrian Kesehatan berpendapat bahwa tidak ada perbedaan rata-rata kadar nikotin yang terdapat pada rokok merek A dan B. Untuk menguji pendapat tersebut, dipilih sampel acak sebanyak 10 batang rokok merek A dan 8 batang rokok merek B. Dari hasil laboratorium didapat rata-rata nikotin rokok merek A adalah 23.1 mg dengan simpangan baku 1.5 mg. Sedangkan rata-rata nikotin pada rokok merek B adalah 22.7 mg dengan simpangan
 ]
 
 .pull-right[
 &lt;br&gt;&lt;br&gt;&lt;br&gt;
 
-**Latihan 3**
-
-Sorang manajer di sebuah bank ingin mengetahui persentase nasabah yang tidak puas dengan pelayanan yang diberikan oleh pegawainya. Oleh karena itu, dilakukan penelitian terhadap 250 nasabah yang dipilih secara acak dan terdapat 60 orang yang tidak puas. Dengan tingkat keyakinan 95%, tentukan penduga selang bagi `\(p\)` (proporsi nasabah yang tidak puas).
-
-___
-
-**Latihan 4**
-
-Dari suatu contoh acak 400 perokok, 86 ternyata lebih menyukai merk `\(X\)`. Buat Selang Kepercayaan 90% bagi proporsi populasi Perokok yang menyukai merk `\(X\)`
+baku 1.7 mg. Ujilah pendapat tersebut menggunakan taraf nyata `\(5\%\)` dengan asumsi ragam kedua populasi tersebut sama.
 
 ]
 ---
 
+class: inverse, center, middle
+
+# Uji Hipotesis untuk rata-rata selisih 2 populasi &lt;br&gt;tidak saling bebas (data berpasangan)
+
+---
+
 .pull-left[
 
-## Ukuran Contoh Optimum
+### Hipotesis
 
-### `\(n=p(1-p)\left(\dfrac{z_\frac{\alpha}{2}}{e}\right)^2\)`
+Misalkan `\(\mu_1-\mu_2=\mu_D\)`
 
-### `\(n=\)` ukuran contoh
+Satu arah:
+- `\(H_0\)` : `\(\mu_D \ge \delta \hspace{1cm}\text{Vs}\hspace{1cm}H_1:\mu_D&lt;\delta\)`
+- `\(H_0\)` : `\(\mu_D \le \delta \hspace{1cm}\text{Vs}\hspace{1cm}H_1:\mu_D&gt;\delta\)`
 
-### `\(p=\)` proporsi populasi
-
-(jika tidak diketahui: `\(p=0.5\)`)
-
-### `\(e=\)` batas kesalahan pendugaan (_bound of error_)
+Dua arah:
+- `\(H_0\)` : `\(\mu_D = \delta \hspace{1cm}\text{Vs}\hspace{1cm}H_1:\mu_D \ne \delta\)`
 
 ]
 
 .pull-right[
 
-&lt;br&gt;&lt;br&gt;&lt;br&gt;
 
-**Contoh**
-
-Seorang kepala pabrik yang bertanggung jawab tentang mutu barang ingin mengestimasi besarnya proporsi/persentase barang yang rusak. Dia ingin 95% yakin bahwa pendugaan proporsi `\(\hat{p}\)` berada 0.09 di sekitar proporsi populasi sebenarnya. Tentukan banyaknya contoh yang diperlukan.
-
-___
-
-Diketahui:&lt;br&gt;
-`\(\alpha=5\%\)` maka `\(z_\frac{\alpha}{2}=z_{0.025}=1.645\)` &lt;br&gt;
-`\(p\)` tidak diketahui, maka 
-
-`$$n=p(1-p)\left(\dfrac{z_\frac{\alpha}{2}}{e}\right)^2=0.5(1-0.5)\left(\frac{1.645}{0.09}\right)^2=84$$`
-
-Jadi, banyaknya sampel yang dibutuhkan adalah 84.
 
 ]
 
