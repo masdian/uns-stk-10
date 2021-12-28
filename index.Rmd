@@ -167,17 +167,18 @@ Dalam pengambilan keputusan memungkinkan untuk terjadi kesalahan.
 .pull-right[
 
 ### 1. Hipotesis
-.red[**H1potesis 2 Arah:**]
+.red[**Hipotesis 2 Arah:**]
 
-$H_0$ : $\theta=\theta_0$ <br> $H_1$ : $\theta\ne\theta_0$
+$H_0$ : $\theta=\theta_0 \hspace{1cm}$ Vs $\hspace{1cm}H_1$ : $\theta\ne\theta_0$
 
 .red[**Hipotesis 1 Arah:**]
 
-$H_0$ : $\theta \le \theta_0$ <br> $H_0$ : $\theta > \theta_0$
+$H_0$ : $\theta \le \theta_0 \hspace{1cm}$ Vs $\hspace{1cm}H_1$ : $\theta>\theta_0$
 
 atau
 
-$H_0$ : $\theta \ge \theta_0$ <br> $H_0$ : $\theta < \theta_0$
+$H_0$ : $\theta \ge \theta_0 \hspace{1cm}$ Vs $\hspace{1cm}H_1$ : $\theta<\theta_0$
+
 
 ]
 
@@ -211,7 +212,7 @@ $U$ merupakan sembarang statistik uji untuk paramater $\theta$
 
 ### 4. Pengujian Hipotesis
 
-Tergantung pada $H_1$. Misalkan $U \sim N(0,1)$ dan $H_1$ : $\theta \ne \theta_0$
+Tergantung pada $H_1$. Misalkan $U \sim N(0,1)$ dan <br> $H_1$ : $\theta \ne \theta_0$
 
 ![](gb_06.png)
 Tolak $H_0$ jika $U<-z_\frac{\alpha}{2}$ atau $U>z_\frac{\alpha}{2}$
@@ -344,7 +345,7 @@ $t_{\alpha(n-1)}=t_{0.05(19)}=1.729$
 
 ![](gb_03.jpg)
 
-Terlihat bahwa $t_0>t_{0.05(19)}$ sehingga $H_0$ ditolak. Cukup bukti untuk
+Terlihat bahwa $t_0>t_{0.05(19)}$ sehingga $H_0$ .red[**ditolak**]. Cukup bukti untuk
 menyatakan bahwa perusahaan mobil tersebut tidak layak diberikan izin pada taraf nyata 5%
 ]
 
@@ -355,7 +356,9 @@ menyatakan bahwa perusahaan mobil tersebut tidak layak diberikan izin pada taraf
 **Latihan 1**
 
 Direktur keuangan suatu perusahaan berpendapat bahwa rata-rata pengeluaran untuk biaya hidup perhari bagi setiap karyawan di perusahaan tersebut adalah Rp176.000,00. Untuk menguji pendapatnya, dilakukanlah wawancara terhadap 25 karyawan secara acak dan didapat rata-rata pengeluaran harian sebesar Rp170.000,00 dengan simpangan baku sebesar Rp10.000,00. Dengan taraf nyata $5\%$, ujilah pendapat tersebut.
+
 ___
+
 **Latihan 2**
 
 Ada yang mengatakan bahwa jarak yang ditempuh sebuah mobil secara rata-rata kurang dari 20000 km dalam 1 tahun. Untuk menguji pendapat ini suatu contoh acak 100 pemilik mobil diminta mencatat km yang ditempuhnya. Apakah anda sependapat dengan pernyataan di atas jika contoh tersebut menghasilkan rata-rata 23500 km dengan simpangan baku 3900 km?
@@ -420,7 +423,7 @@ dengan $v=n_1+n_2-2$
 
 **3. Jika $\sigma^2_1$ dan $\sigma^2_2$ tidak diketahui <br>dan diasumsikan tidak sama:**
 
-$t_0=\dfrac{\bar{x}_1-\bar{x}_2}{\sqrt{ \dfrac{\sigma^2_1}{n_1}+\dfrac{\sigma^2_2}{n_2}}}$
+$t_0=\dfrac{\bar{x}_1-\bar{x}_2}{\sqrt{ \dfrac{s^2_1}{n_1}+\dfrac{s^2_2}{n_2}}}$
 
 **Titik Kritis:** 
 
@@ -507,22 +510,217 @@ class: inverse, center, middle
 
 .pull-left[
 
-### Hipotesis
+Uji Hipotesis untuk data berpasangan sering digunakan sebagai dasar evaluasi, misalnya:
 
-Misalkan $\mu_1-\mu_2=\mu_D$
+1. Apakah rata-rata penjualan salesman yang belum mendapatkan pelatihan $(\mu_1)$ sama atau lebih kecil dari rata-rat penjualan salesman yang sudah mendapatkan pelatihan $(\mu_2)$?
 
-Satu arah:
-- $H_0$ : $\mu_D \ge \delta \hspace{1cm}\text{Vs}\hspace{1cm}H_1:\mu_D<\delta$
-- $H_0$ : $\mu_D \le \delta \hspace{1cm}\text{Vs}\hspace{1cm}H_1:\mu_D>\delta$
+1. Apakah rata-rata pendapatan penduduk suatu desa sebelum listrik PLN masuk $(\mu_1)$ lebih kecil dibandingkan dengan rata-rata pendapatan setelah listrik PLN masuk $(\mu_2)$?
 
-Dua arah:
-- $H_0$ : $\mu_D = \delta \hspace{1cm}\text{Vs}\hspace{1cm}H_1:\mu_D \ne \delta$
+1. Apakah rata-rata berat badan orang-orang sebelum meminum suatu produk diet lebih kecil dibandingkan dengan rata-rata berat badan sesudah meminum produk diet?
 
 ]
 
 .pull-right[
 
+### Hipotesis
 
+Misalkan $\mu_1-\mu_2=\mu_D$
+
+Satu arah:
+- $H_0$ : $\mu_D \ge \delta_0 \hspace{1cm}\text{Vs}\hspace{1cm}H_1:\mu_D<\delta_0$
+- $H_0$ : $\mu_D \le \delta_0 \hspace{1cm}\text{Vs}\hspace{1cm}H_1:\mu_D>\delta_0$
+
+Dua arah:
+- $H_0$ : $\mu_D = \delta_0 \hspace{1cm}\text{Vs}\hspace{1cm}H_1:\mu_D \ne \delta_0$
+
+]
+
+---
+
+.pull-left[
+
+### Statistik Uji
+
+| Pasangan Data | 1 | 2 | 3 | ... | $n$ |
+|:---           |:--:|:-:|:-:|:-:|:-:|
+| Data Awal ( $X_1$ )| $x_{11}$ | $x_{12}$ | $x_{13}$ | ... | $x_{1n}$ |
+| Data Akhir ( $X_2$ )| $x_{21}$ | $x_{22}$ | $x_{23}$ | ... | $x_{2n}$ |
+|  $d = X_1 - X_2$ | $d_1$ | $d_2$ | $d_3$ | ... | $d_n$ |
+
+.pull.center[
+$s^2_d=\dfrac{\sum_{i}(d_i-\bar{d})^2}{n-1}$
+
+$d_i=x_{1i}-x_{2i}$
+
+$\bar{d}=\dfrac{\sum_{i}d_i}{n}$
+]
+
+Statistik uji yang digunakan adalah 
+
+$$t_0=\dfrac{\bar{d}-\delta_0}{s_d/\sqrt{n}}$$
+
+]
+
+.pull-right[
+
+**Titik Kritis:**
+
+- Uji satu arah: $t_{\alpha(n-1)}$
+- Uji dua arah: $t_{\frac{\alpha}{2}(n-1)}$
+
+### Pengujian Hipotesis
+
+Satu arah:
+- $H_0$ : $\mu_D \ge \delta_0 \hspace{1cm}\text{Vs}\hspace{1cm}H_1:\mu_D<\delta_0$ maka $H_0$ .red[**ditolak jika**] $t_0<-t_{\alpha(n-1)}$
+
+- $H_0$ : $\mu_D \le \delta_0 \hspace{1cm}\text{Vs}\hspace{1cm}H_1:\mu_D>\delta_0$ maka $H_0$ .red[**ditolak jika**] $t_0>t_{\alpha(n-1)}$
+
+Dua arah:
+- $H_0$ : $\mu_D = \delta_0 \hspace{1cm}\text{Vs}\hspace{1cm}H_1:\mu_D \ne \delta_0$ maka $H_0$ .red[**ditolak jika**] $t_0<-t_{\frac{\alpha}{2}(n-1)}$ .red[**atau**] $t_0>t_{\frac{\alpha}{2}(n-1)}$
+
+
+]
+
+---
+
+**Contoh**
+
+Suatu klub kesegaran jasmani ingin mengevaluasi program diet, kemudian dipilih secara acak 10 orang anggotanya untuk mengikuti program diet tersebut selama 3 bulan. Data yang diambil adalah berat badan sebelum dan sesudah program diet dilaksanakan, yaitu:
+
+![](gb_05.jpg)
+.pull-left[
+
+Apakah program diet tersebut dapat mengurangi berat badan minimal 5 kg? Lakukan pengujian pada taraf nyata 5%!
+
+]
+
+.pull-right[
+
+Karena kasus ini merupakan contoh data berpasangan, maka hipotesis yang digunakan adalah:
+
+$H_0$ : $\mu_D \ge 5 \hspace{1cm}\text{Vs}\hspace{1cm}H_1:\mu_D<5$
+
+]
+
+---
+
+.pull-left[
+
+$\bar{d}=\dfrac{\sum_{i}d_i}{n}=\dfrac{51}{10}=5.1$
+
+$s^2_d=\dfrac{\sum_{i}(d_i-\bar{d})^2}{n-1}=\dfrac{n\sum_{i}d^2_i-(\sum_{i}d_i)^2}{n(n-1)}=1.43$
+
+$s_d=\sqrt{s^2_d}=\sqrt{1.43}=1.2$
+
+**Statistik Uji**:
+
+
+$t_0=\dfrac{\bar{d}-\delta_0}{s_d/\sqrt{n}}=\dfrac{5.1-5}{1.2/\sqrt{10}}=0.26$
+
+**Titik Kritis**: $t_{\alpha(n-1)}=t_{0.05(9)}=1.833$
+
+**Pengujian Hipotesis** pada taraf nyata 5%: <br> $H_0$ ditolak jika $t_0<-t_{0.05(9)}=-1.833$
+
+**Kesimpulan**:<br>
+$H_0$ .red[tidak ditolak], cukup bukti untuk menyatakan program diet tersebut dapat mengurangi berat badan minimal 5 kg pada taraf nyata 5%
+
+]
+
+.pull-right[
+
+**Latihan**
+
+Direktur pemasaran akan melanjutkan program training bagi para salesman jika rata-rata penjualan setelah dilatih lebih tinggi dari sebelum dilatih. Berikut adalah hasil penjualan dari 10 salesman yang dipilih secara acak.
+
+![](gb_10.jpg)
+- Ujilah Hipotesis: <br> $H_0$ : $\mu_D \le 0 \hspace{1cm}\text{Vs}\hspace{1cm}H_1:\mu_D>0$ <br>dengan taraf nyata 5%
+
+- Berdasarkan jawaban di atas, apakah program training bagi salesman perlu dilanjutkan? Mengapa?
+]
+
+---
+
+class: inverse, center, middle
+
+# Uji Hipotesis untuk proporsi $(p)$ <br>1 populasi
+
+---
+
+.pull-left[
+
+### Hipotesis
+
+.red[**Satu arah**]:
+- $H_0$ : $p \ge p_0 \hspace{1cm}\text{Vs}\hspace{1cm}H_1:p < p_0$
+- $H_0$ : $p \le p_0 \hspace{1cm}\text{Vs}\hspace{1cm}H_1:p > p_0$
+
+.red[**Dua arah**]:
+- $H_0$ : $p = p_0 \hspace{1cm}\text{Vs}\hspace{1cm}H_1:p \ne p_0$
+
+### Statistik Uji
+
+$z_0=\dfrac{\hat{p}-p_0}{\sqrt{\dfrac{p_0(1-p_0)}{n}}}$
+
+**Titik Kritis**:<br>
+$z_\alpha$ (satu sisi), $z_\frac{\alpha}{2}$ (dua sisi)
+
+]
+
+.pull-right[
+
+**Contoh**
+
+Menurut suatu artikel suatu obat baru yang diekstrak dari suatu jamur,
+cyclosporin A, mampu meningkatkan tingkat kesuksesan dalam operasi
+transplantasi organ. Menurut artikel tersebut, 32 pasien yang menjalani
+operasi transplantasi ginjal diberikan obat baru tersebut. Dari 32 pasien
+tersebut, 19 diantaranya sukses dalam operasi transpalntasi ginjal.
+Sebagai informasi bahwa keberhasilan dengan menggunakan prosedur yang
+standar adalah sekitar 60%.
+
+Apakah dapat dikatakan bahwa obat baru tersebut lebih baik dari
+prosedur yang standar pada taraf nyata 5%?
+___
+
+Diketahui $\hat{p}=\dfrac{19}{32}=0.59$
+
+Ditanyakan apakah $p>0.6$?
+
+**Hipotesis**: 
+
+$H_0$ : $p \le 0.6 \hspace{1cm}\text{Vs}\hspace{1cm}H_1:p > 0.6$
+
+]
+
+
+---
+
+.pull-left[
+
+**Statistik Uji**:
+
+$$z_0=\dfrac{\hat{p}-p_0}{\sqrt{\dfrac{p_0(1-p_0)}{n}}}=\dfrac{0.59-0.6}{\sqrt{\dfrac{0.6(1-0.6)}{32}}}=-0.16$$
+**Titik Kritis**: $z_{0.05}=1.96$
+
+**Pengujian Hipotesis** pada taraf nyata 5%.<br>
+$H_0$ ditolak jika $z_0>z_{0.05}=1.96$
+
+**Kesimpulan**:<br>
+Karena $z_0<1.96$ maka $H_0$ .red[**tidak ditolak**]. Tidak cukup bukti untuk mengatakan bahwa obat baru lebih baik dari prosedur standar pada taraf nyata 5%.
+
+]
+
+.pull-right[
+
+**Latihan 1**
+
+Seorang pejabat sebuah bank berpendapat bahwa peminjam kredit yang belum mengembalikan kreditnya sebesar 70% atau lebih. Untuk menguji pendapatnya, sebanyak 225 orang peminjam kredit dipilih secara acak dan ternyata 150 orang di antaranya belum mengembalikan kredit. Lakukan uji hipotesis terhadap pendapat pejabat bank tersebut pada taraf nyata 5%.
+
+___
+
+**Latihan 2**
+
+Seorang pengusaha ingin mendirikan pasar swalayan di sebuah kota. Dia beranggapan bahwa minimal 70% ibu rumah tangga senang berbelanja di pasar swalayan. Pengusaha tersebut menyewa konsultan untuk menguji pendapatnya tersebut. Sebanyak 600 ibu rumah tangga dipilih secara acak dan ternyata 406 orang di antaranya mengatakan senang berbelanja di pasar swalayan. Dengan menggunakan taraf nyata 5%, ujilah pendapat pengusaha tersebut.
 
 ]
 
@@ -530,17 +728,82 @@ Dua arah:
 
 class: inverse, center, middle
 
-# Penduga Selang untuk Selisih Proporsi $(p_1-p_2)$ <br> dari 2 Populasi
+# Uji Hipotesis untuk selisih proporsi $(p_1-p_2)$ <br>2 populasi
 
 ---
 
 .pull.center[
-### Dugaan Selang Kepercayaan $\left(1 − \alpha\right)\times100\%$ bagi $p_1-p_2$
+
+### Misalkan selisih antara $p_1$ dan $p_2$ adalah $\delta_0$
+
 ]
 
-<br><br><br>
+.pull-left[
 
-$$(\hat{p}_1-\hat{p}_2)-z_\frac{\alpha}{2}\sqrt{\dfrac{\hat{p}_1(1-\hat{p}_1)}{n_1}+\dfrac{\hat{p}_2(1-\hat{p}_2)}{n_2}}<p_1-p_2<(\hat{p}_1-\hat{p}_2)+z_\frac{\alpha}{2}\sqrt{\dfrac{\hat{p}_1(1-\hat{p}_1)}{n_1}+\dfrac{\hat{p}_2(1-\hat{p}_2)}{n_2}}$$
+### Jika $\delta_0=0$
+
+**Hipotesis**:
+
+Satu arah:
+- $H_0$ : $p_1 \ge p_2 \hspace{1cm}\text{Vs}\hspace{1cm}H_1:p_1 < p_2$
+- $H_0$ : $p_1 \le p_2 \hspace{1cm}\text{Vs}\hspace{1cm}H_1:p_1 > p_2$
+
+Dua arah:
+- $H_0$ : $p_1 = p_2 \hspace{1cm}\text{Vs}\hspace{1cm}H_1:p_1 \ne p_2$
+
+]
+
+.pull-right[
+
+### Jika $\delta_0>0$
+
+**Hipotesis**:
+
+Satu arah:
+- $H_0$ : $p_1-p_2 \ge \delta_0 \hspace{1cm}\text{Vs}\hspace{1cm}H_1:p_1-p_2 < \delta_0$
+- $H_0$ : $p_1-p_2 \le \delta_0 \hspace{1cm}\text{Vs}\hspace{1cm}H_1:p_1-p_2 > \delta_0$
+
+Dua arah:
+- $H_0$ : $p_1-p_2=\delta_0 \hspace{1cm}\text{Vs}\hspace{1cm}H_1:p_1-p_2 \ne \delta_0$
+
+]
+
+---
+
+.pull-left[
+
+### Jika $\delta_0=0$
+
+**Statistik Uji**
+
+$z_0=\dfrac{\hat{p}_1-\hat{p}_2}{\sqrt{\hat{p}(1-\hat{p})\left(\dfrac{1}{n_1}+\dfrac{1}{n_2}\right)}}$
+
+di mana $\hat{p}=\dfrac{x_1+x_2}{n_1+n_2}$
+
+**Titik Kritis**:
+
+Uji satu arah: $z_\alpha$
+
+Uji dua arah: $z_\frac{\alpha}{2}$
+
+]
+
+.pull-right[
+
+### Jika $\delta_0>0$
+
+**Statistik Uji**
+
+$z_0=\dfrac{(\hat{p}_1-\hat{p}_2)-\delta_0}{\sqrt{\dfrac{\hat{p}_1(1-\hat{p}_1)}{n_1}+\dfrac{\hat{p}_2(1-\hat{p}_2)}{n_2}}}$
+
+**Titik Kritis**:
+
+Uji satu arah: $z_\alpha$
+
+Uji dua arah: $z_\frac{\alpha}{2}$
+
+]
+
 
 ---
 
@@ -548,49 +811,70 @@ $$(\hat{p}_1-\hat{p}_2)-z_\frac{\alpha}{2}\sqrt{\dfrac{\hat{p}_1(1-\hat{p}_1)}{n
 
 **Contoh**
 
-Untuk mengetahui referensi suatu produk tertentu diambil contoh 1000 dari kota $A$ dan 1500 dari kota $B$, diperoleh proporsi yang menyukai produk tersebut di kota $A$ adalah $0.7$ dan di kota $B$ adalah $0.65$.
+Sebuah penelitian dilakukan untuk menguji pengaruh obat baru untuk viral infection. 100 ekor tikus diberikan suntikan infeksi kemudian dibagi secara acak ke dalam dua grup masing-masing 50 ekor tikus. Grup 1 sebagai kontrol, dan grup 2 diberi obat baru tersebut. Setelah 30 hari, proporsi tikus yang hidup untuk grup 1 adalah 36% dan untuk grup 2 adalah 60%. Apakah obat tersebut efektif pada taraf nyata 5%?
 
-Tentukan selang kepercayaan 95% bagi selisih proporsi yang menyukai produk tersebut
+Obat dikatakan efektif jika perbedaan antara grup perlakuan dengan grup kontrol lebih dari 12%.
 
 ___
 
-Diketahui: <br>
-$n_A=1000$, $n_B=1500$, $\hat{p}_A=0.7$, dan $\hat{p}_B=0.65$
+Misalkan:<br>
+Group Kontrol $\rightarrow 1$ <br>
+Group Perlakuan $\rightarrow 2$
 
-$z_\frac{\alpha}{2}=z_{0,025}=1.645$
+$\hat{p}_1=0.36$ ; $\hat{p}_2=0.6$<br>
+$n_1=n_2=50$
 
+Ditanyakan $p_2-p_1>0.12$?
 
-$(\hat{p}_A-\hat{p}_B)-z_\frac{\alpha}{2}\sqrt{\dfrac{\hat{p}_A(1-\hat{p}_A)}{n_A}+\dfrac{\hat{p}_B(1-\hat{p}_B)}{n_B}}$
-
-$=(0.7-0.65)-1.645\sqrt{\dfrac{0.7(1-0.7)}{1000}+\dfrac{0.65(1-0.65)}{1500}}$ <br>
-$=0.05-0.03=0.02$
 
 ]
 
 .pull-right[
 
-<br><br><br><br><br>
-$(\hat{p}_A-\hat{p}_B)+z_\frac{\alpha}{2}\sqrt{\dfrac{\hat{p}_A(1-\hat{p}_A)}{n_A}+\dfrac{\hat{p}_B(1-\hat{p}_B)}{n_B}}$
+**Hipotesis**
 
-$=(0.7-0.65)+1.645\sqrt{\dfrac{0.7(1-0.7)}{1000}+\dfrac{0.65(1-0.65)}{1500}}$ <br>
-$=0.05+0.03=0.08$
+$H_0$ : $p_1-p_2 \le 0.12 \hspace{0.5cm}\text{Vs}\hspace{0.5cm}H_1:p_1-p_2 > 0.12$
 
-<br>
-Jadi kita percaya bahwa pada selang 0.02 sampai 0.08 memuat selisih proporsi
-orang yang suka produk tersebut dari kota $A$ dan $B$ pada $\alpha=10\%$
+**Statistik Uji**
+
+$$\begin{align*}
+z_0&=\dfrac{(\hat{p}_2-\hat{p}_1)-\delta_0}{\sqrt{\dfrac{\hat{p}_1(1-\hat{p}_1)}{n_1}+\dfrac{\hat{p}_2(1-\hat{p}_2)}{n_2}}}\\
+&=\dfrac{(0.6-0.36)-0.12}{\sqrt{\dfrac{0.36(1-0.36)}{50}+\dfrac{0.6(1-0.6)}{50}}}\\
+&=1.24
+\end{align*}$$
+
+**Titik Kritis**:<br>
+Uji satu arah: $z_{0.05}=1.645$ <br>
+$H_0$ ditolak jika $z_0>z_{0.05}$
+
+**Kesimpulan**: Karena $1.24<1.645$, maka $H_0$ tidak ditolak. Belum cukup bukti untuk menunjukkan bahwa obat tersebut efektif.
 ]
+
+
+
 ---
 
 .pull-left[
-**Latihan**
 
-Sebuah perusahaan rokok menghasilkan dua jenis rokok, merk $A$ dan merk $B$. Perusahaan itu mengatakan bahwa penjualan rokok merk $A$ lebih besar 8% dari penjualan rokok merk $B$. Bila ternyata 42 di antara 200 perokok lebih menyukai merk $A$ dan 18 diantara 150 perokok lebih menyukai merk $B$, buat selang kepercayaan 95% bagi selisih persentase penjualan kedua merk rokok tersebut.
+**Latihan 1**
 
-Simpulkan apakah selisih 8% tersebut dapat diterima atau tidak.
+Seorang pejabat dari Dirjen Pajak berpendapat bahwa persentase wajib pajak yang belum membayar pajak dari dua daerah adalah sama. Untuk menguji pendapatnya, telah diteliti sebanyak 200 wajib pajak dari daerah pertama dan ada 7 orang yang belum membayar pajak. Sedangkan dari 400 orang wajib pajak di daerah kedua, terdapat 10 wajib pajak yang belum membayar pajak. Ujilah pendapat tersebut dengan taraf nyata 5%.
+
+___
+
+**Latihan 2**
+
+Seorang direktur mareketing berpendapat bahwa persentase barang yang tidak laku di antara produk A dan B adalah sama. Dari 200 produk A yang dijual di pasar, ada 50 produk yang diretur. Dari 200 produk B, sebanyak 70 produk yang diretur. Dengan menggunakan taraf nyata 10%, ujilah pendapat direktur marketing tersebut.
+
+]
+
+.pull-right[
+
 
 ]
 
 ---
+
 
 class: inverse, center, middle
 
