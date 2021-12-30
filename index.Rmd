@@ -231,17 +231,17 @@ Tolak $H_0$ jika $U<-z_\frac{\alpha}{2}$ atau $U>z_\frac{\alpha}{2}$
 
 
 ![](gb_07.png)
-Tolak $H_0$ jika $U<-z_\frac{\alpha}{2}$
+Tolak $H_0$ jika $U<-z_{\alpha}$
 
 ![](gb_08.png)
-Tolak $H_0$ jika $U>z_\frac{\alpha}{2}$
+Tolak $H_0$ jika $U>z_{\alpha}$
 ]
 
 .pull-right[
 
 ### 5. Kesimpulan
 
-Cukup bukti / tidak cukup bukti untuk menyatakan bahwa $H_0$ benar pada taraf nyata $\alpha$
+Cukup bukti / tidak cukup bukti untuk menolak $H_0$ benar pada taraf nyata $\alpha$
 ]
 
 ---
