@@ -1050,7 +1050,7 @@ Tentukanlah:
 1. $H_0$ dan $H_1$ yang digunakan
 1. Banyaknya sampel yang digunakan (Jumlah sampel `Girls` dan `Boys`)
 1. Tingkat signifikansi yang digunakan
-1. Keputusan Uji Hipotesis ($H_0$ ditolak atau tidak ditolak)
+1. Keputusan Uji Hipotesis ( $H_0$ ditolak atau tidak ditolak)
 1. Kesimpulan yang dihasilkan
 
 ---
