@@ -355,7 +355,9 @@ menyatakan bahwa perusahaan mobil tersebut tidak layak diberikan izin pada taraf
 ]
 
 .pull-left[
-R bisa diakses secara *online* di https://colab.to/r
+R bisa diakses secara *online*
+**<a href="https://colab.research.google.com/#create=true&language=r">di sini</a>**
+ 
 Pengujian hipotesis untuk rata-rata mean $(\mu)$ satu populasi bisa menggunakan *package* `BSDA`. Oleh karena itu, perlu untuk menginstall terlebih dahulu *package* `BSDA`.
 ```{r eval=FALSE}
 install.package("BSDA")
